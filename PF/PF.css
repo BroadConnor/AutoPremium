@@ -1,0 +1,412 @@
+:root {
+    --primario: #2b7cff;
+    --primario-oscuro: #1a5fd6;
+    --secundario: #1a1a1a;
+    --acento: #ff6b00;
+    --claro: #f8f9fa;
+    --oscuro: #333333;
+    --gris: #6c757d;
+    --gris-claro: #e9ecef;
+    --blanco: #ffffff;
+    --sombra: 0 4px 12px rgba(0,0,0,0.08);
+    --sombra-lg: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--oscuro);
+    background: var(--blanco);
+}
+
+/* Header */
+.encabezado {
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.contenedor-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secundario);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primario);
+}
+
+.menu-navegacion {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacion a:hover {
+    color: var(--primario);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--secundario) 0%, #2d3748 100%);
+    color: var(--blanco);
+    padding: 160px 0 80px;
+    text-align: center;
+}
+
+.contenido-hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Search Section */
+.seccion-busqueda {
+    background: var(--blanco);
+    padding: 60px 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.5rem;
+    color: var(--secundario);
+    margin-bottom: 1rem;
+}
+
+.titulo-seccion p {
+    color: var(--gris);
+    font-size: 1.1rem;
+}
+
+.formulario-busqueda {
+    background: var(--claro);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.cuadricula-formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--oscuro);
+}
+
+.grupo-formulario select,
+.grupo-formulario input {
+    padding: 12px;
+    border: 1px solid var(--gris-claro);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.boton-busqueda {
+    background: var(--primario);
+    color: var(--blanco);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-busqueda:hover {
+    background: var(--primario-oscuro);
+}
+
+/* Vehicles Section */
+.seccion-vehiculos {
+    padding: 80px 0;
+    background: var(--claro);
+}
+
+.cuadricula-vehiculos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tarjeta-vehiculo {
+    background: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-vehiculo:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-lg);
+}
+
+.imagen-vehiculo1 {
+    height: 200px;
+    background: url(COROLLA2022.jpg);
+    background-size: 400px; background-repeat: no-repeat; background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 2.0rem;
+    font-weight: 700;
+
+}
+
+.imagen-vehiculo2 {
+    height: 200px;
+    background: url(CIVIC2021.jpg); size: auto;
+     background-size: 400px; background-repeat: no-repeat; background-position: center;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.imagen-vehiculo3 {
+    height: 200px;
+    background: url(FORDECO2023.jpg); size: auto;
+     background-size: 320px; background-repeat: no-repeat; background-position: center;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+.info-vehiculo {
+    padding: 1.5rem;
+}
+
+.titulo-vehiculo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secundario);
+}
+
+.detalles-vehiculo {
+    color: var(--gris);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.precio-vehiculo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primario);
+    margin-bottom: 1rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primario);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--primario-oscuro);
+}
+
+.boton-secundario {
+    background: transparent;
+    border: 2px solid var(--primario);
+    color: var(--primario);
+}
+
+.boton-secundario:hover {
+    background: var(--primario);
+    color: var(--blanco);
+}
+
+/* Services Section */
+.seccion-servicios {
+    padding: 80px 0;
+    background: var(--claro);
+}
+
+.cuadricula-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tarjeta-servicio {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.icono-servicio {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primario);
+}
+
+.titulo-servicio {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--secundario);
+}
+
+.precio-servicio {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primario);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.pie-pagina {
+    background: var(--secundario);
+    color: var(--blanco);
+    padding: 60px 0 0;
+}
+
+.contenido-pie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.seccion-pie h3 {
+    margin-bottom: 1.5rem;
+    color: var(--blanco);
+}
+
+.seccion-pie p,
+.seccion-pie a {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+    display: block;
+    text-decoration: none;
+}
+
+.seccion-pie a:hover {
+    color: var(--blanco);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    color: var(--blanco);
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.pie-inferior {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-navegacion {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cuadricula-formulario {
+        grid-template-columns: 1fr;
+    }
+}

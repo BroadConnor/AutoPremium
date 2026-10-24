@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Servicios - AutoPremium</title>
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <a href="index.html" class="logo">Auto<span>Premium</span></a>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vehiculos.html" >Catálogo</a></li>
+                    <li><a href="servicios.html" style="color: var(--primario);">Servicios</a></li>
+                    <li><a href="ubicanos.html">Ubícanos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contenido-principal">
+        <div class="contenedor">
+            <!-- Page Header -->
+            <div class="encabezado-pagina">
+                <h1>Catálogo de Servicios</h1>
+                <p>Descubre nuestro catalogo de servicios que te frecemos</p>
+            </div>
+
+            <!-- Filtros Section -->
+            <section class="seccion-filtros">
+                <form method="GET" action="#">
+                    <div class="busqueda-container "></div>
+              
+                    <label class="block sr-only undefined" for="searchbar-2">Buscar</label>
+<!-- /label -->
+                    <div class="relative">
+                    <input class="c-input block border-black rounded font-semibold placeholder-neutral-dark focus:border-black focus:shadow-outline-focus-input focus:ring-4 focus:ring-warning-base disabled:bg-neutral-light disabled:border-neutral-base pr-12 w-full" id="searchbar-2" name="searchbar-2" type="search" placeholder="Buscar en este sitio">
+                    <button type="submit" class="absolute top-0 right-0 m-sm p-0.5 text-primary-base hover:text-primary-dark focus:bg-warning-base focus:outline-none focus:shadow-outline-focus">
+                    <span class="sr-only">Buscar</span>
+                    <svg  viewBox="0 0 24 24" width="1.375em" height="1.375em" aria-hidden="true">
+                    <path d="M23.498 23.487a1.713 1.713 0 000-2.421l-4.572-4.575a.43.43 0 01-.062-.539 10.283 10.283 0 10-2.911 2.911.43.43 0 01.539.055l4.574 4.574a1.712 1.712 0 002.433-.005zM3.451 10.289a6.85 6.85 0 116.85 6.85 6.85 6.85 0 01-6.85-6.85z" fill="currentColor" />
+                    </svg>
+                    </button>
+                    </div>
+<!-- /searchbar -->
+                   <!-- <div class="cuadricula-filtros">
+
+                        <div class="grupo-formulario">
+                            <select id="tipo" name="tipo">
+                            <label for="tipo">Tipo</label>
+                                <option value="Tipo">Tipo</option>
+                                <option value="Cambio-de-aceite">Cambio de aceite</option>
+                                <option value="Instalacion-peliculas">Instalacion de peliculas</option>
+                                <option value="Cambio-de-balatas">Cambio de balatas</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="costo">Costo</label>
+                            <select id="costo" name="costo">
+                                <option value="Precio">Precio</option>
+                                <option value="$500">$500</option>
+                                <option value="$1,000">1,000</option>
+                                <option value="$3,000">3,000</option>
+                                <option value="+$5,000">5,000</option>
+                            </select>
+                        </div>
+
+
+                        <div class="grupo-formulario">
+                                <label for="color">Color</label>
+                            <select id="color" name="color">
+                                <option value="">Todos los colores</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Negro">Negro</option>
+                                <option value="Gris">Gris</option>
+                                <option value="Azul">Azul</option>
+                                <option value="Rojo">Rojo</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="acciones-filtros">
+                        <div>
+                            <button type="submit" class="boton">Aplicar Filtros</button>
+                            <a href="servicio.html" class="boton boton-secundario">Limpiar Filtros</a>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="orden">Ordenar por:</label>
+                            <select id="orden" name="orden">
+                                <option value="ano_desc">Más Nuevos</option>
+                                <option value="ano_asc">Más Antiguos</option>
+                                <option value="precio_asc">Precio: Menor a Mayor</option>
+                                <option value="precio_desc">Precio: Mayor a Menor</option>
+                                <option value="modelo_asc">Modelo A-Z</option>
+                                <option value="modelo_desc">Modelo Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Results Header -->
+            <div class="encabezado-resultados">
+                <div class="contador-resultados">
+                    Mostrando servicios disponibles
+                </div>
+            </div>
+
+            <!-- Vehicles Grid -->
+            <div class="cuadricula-servicio">
+                <!-- Vehículo 1 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio1">
+                        Cambio de Aceite
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Cambio de Aceite</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Descripción:</span>
+                                <span>Se realiza el cambio...</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tiempo estimado</span>
+                                <span>5 Horas</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>T0Y0T4C0...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$250,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=1" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 2 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio2">
+                        Honda Civic
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Honda Civic</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2021</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Gris</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>H0ND4C1V...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$230,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=2" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 3 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio3">
+                        Ford EcoSport
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Ford EcoSport</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>SUV</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Azul</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>F0RD3C0S...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$320,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=3" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 4 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio4">
+                        Chevrolet Aveo
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Chevrolet Aveo</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2022</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Rojo</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>CH3V4V30...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$180,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=4" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- Vehículo 5 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio5">
+                        Nissan Sentra
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Nissan Sentra</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>N1554N53...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$270,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 6 -->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio6">
+                        Volkswagen Jetta
+                        <div class="badge-servicio vendido">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Volkswagen Jetta</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2022</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Blanco</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>V0LKW4G3...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$290,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=6" class="boton boton-pequeno">Ver Detalles</a>
+                            <span class="boton boton-pequeno boton-secundario" style="opacity: 0.6; cursor: not-allowed;">No Disponible</span>
+                        </div>
+                    </div>
+                 </div>
+
+
+                <!-- Vehículo 7-->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio7">
+                        Ford F-150
+                        <div class="badge-servicio vendido">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Ford F-150</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Pick Up</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Blanco</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>F0RDF150B...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$1,010,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Vehículo 8-->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio8">
+                        Cadillac Escalade 
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Cadillac Escalade</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2025</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>SUV</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>35C4L403...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$2,850,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Vehículo 9-->
+                <div class="tarjeta-servicio">
+                    <div class="imagen-servicio9">
+                        Tesla Model 3
+                        <div class="badge-servicio disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-servicio">
+                        <h3 class="titulo-servicio">Tesla Model 3</h3>
+                        <div class="detalles-servicio">
+                            <div class="detalle-servicio">
+                                <span>Año:</span>
+                                <span>2024</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-servicio">
+                                <span>Serie:</span>
+                                <span>T35L4M0D...</span>
+                            </div>
+                        </div>
+                        <div class="precio-servicio">$850,000</div>
+                        <div class="acciones-servicio">
+                            <a href="ver_servicio.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="paginacion">
+                <span class="actual">1</span>
+                <a href="servicio.html?pagina=2">2</a>
+                <a href="servicios.html?pagina=3">3</a>
+                <a href="servicios.html?pagina=2">Siguiente</a>
+                <a href="servicios.html?pagina=3">Última »</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+            <footer class="pie-pagina" id="contacto">
+                <div class="contenedor">
+                    <div class="contenido-pie">
+                        <div class="seccion-pie">
+                            <h3>AutoPremium</h3>
+                            <p>Tu agencia de confianza para vehículos seminuevos de calidad. Ofrecemos las mejores marcas y el servicio más profesional.</p>
+                        </div>
+                        <div class="seccion-pie">
+                            <h3>Contacto</h3>
+                            <p>Av. Principal #123, Ciudad</p>
+                            <p>(555) 123-4567</p>
+                            <p>info@autopremium.com</p>
+                            <p>Lun-Vie: 9:00 - 18:00</p>
+                        </div>
+                        <div class="seccion-pie">
+                            <h3>Enlaces Rápidos</h3>
+                            <a href="index.html">Inicio</a>
+                            <a href="servicio.html">Catálogo</a>
+                            <a href="servicios.html">Servicios</a>
+                            <a href="ubicanos.html">Ubícanos</a>
+                            <a href="clientes.html">Clientes</a>
+                        </div>
+                        <div class="seccion-pie">
+                            <h3>Contáctanos</h3>
+                            <form class="formulario-contacto">
+                                <input type="text" placeholder="Nombre" required>
+                                <input type="email" placeholder="Email" required>
+                                <textarea placeholder="Mensaje" required></textarea>
+                                <button type="submit" class="boton">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="pie-inferior">
+                        <p>&copy; 2025 AutoPremium. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        </html>

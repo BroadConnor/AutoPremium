@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AutoPremium - Agencia de Vehículos Seminuevos</title>
+    <meta name="description" content="AutoPremium: vehículos seminuevos de calidad, servicios de mantenimiento y calculadora de financiamiento.">
+    <link rel="stylesheet" href="PF.css">
+    <link rel="recursos" href="PF/*">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Auto<span>Premium</span></a>
+
+            <nav role="navigation" aria-label="Menú principal">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="PF/vehiculos.html">Catálogo</a></li>
+                    <li><a href="PF/servicios.html">Servicios</a></li>
+                    <li><a href="financiamiento.html">Financiamiento</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Encuentra Tu Vehículo Seminuevo Ideal</h1>
+                <p>Calidad premium, precios competitivos y el mejor servicio en automóviles seminuevos.</p>
+                <a href="#catalogo" class="btn">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section" aria-labelledby="search-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="search-title">Encuentra Tu Vehículo</h2>
+                    <p>Busca entre nuestra amplia selección de vehículos seminuevos</p>
+                </div>
+
+                <form class="search-form" method="GET" action="#" aria-label="Formulario de búsqueda de vehículos">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="marca">Marca</label>
+                            <select id="marca" name="marca">
+                                <option value="">Todas las marcas</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Nissan">Nissan</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" id="modelo" name="modelo" placeholder="Ej: Civic, Corolla" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anio">Año</label>
+                            <select id="anio" name="anio">
+                                <option value="">Todos los años</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipo">Tipo</label>
+                            <select id="tipo" name="tipo">
+                                <option value="">Todos los tipos</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Sedán">Sedán</option>
+                                <option value="Pickup">Pickup</option>
+                                <option value="Hatchback">Hatchback</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">Buscar Vehículos</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Vehicles Section (datos estáticos de ejemplo) -->
+        <section id="catalogo" class="vehicles-section" aria-labelledby="catalogo-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="catalogo-title">Vehículos Destacados</h2>
+                    <p>Descubre nuestra selección de vehículos seminuevos en excelente estado</p>
+                </div>
+
+                <div class="vehicles-grid">
+                    <!-- Vehículo 1 -->
+                    <article class="vehicle-card" aria-labelledby="veh1-title">
+                        <div class="vehicle-image" role="img" aria-label="Imagen de Toyota Corolla 2022">
+                            Corolla 2022
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 id="veh1-title" class="vehicle-title">Toyota Corolla</h3>
+                            <div class="vehicle-details">
+                                <p>Año: 2022</p>
+                                <p>Tipo: Sedán</p>
+                                <p>Color: Blanco</p>
+                            </div>
+                            <div class="vehicle-price">$250,000</div>
+                            <a href="PF/vehiculos.html?id=1" class="btn">Ver Detalles</a>
+                        </div>
+                    </article>
+
+                    <!-- Vehículo 2 -->
+                    <article class="vehicle-card" aria-labelledby="veh2-title">
+                        <div class="vehicle-image" role="img" aria-label="Imagen de Honda Civic 2021">
+                            Civic 2021
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 id="veh2-title" class="vehicle-title">Honda Civic</h3>
+                            <div class="vehicle-details">
+                                <p>Año: 2021</p>
+                                <p>Tipo: Sedán</p>
+                                <p>Color: Gris</p>
+                            </div>
+                            <div class="vehicle-price">$230,000</div>
+                            <a href="PF/vehiculos.html?id=2" class="btn">Ver Detalles</a>
+                        </div>
+                    </article>
+
+                    <!-- Vehículo 3 -->
+                    <article class="vehicle-card" aria-labelledby="veh3-title">
+                        <div class="vehicle-image" role="img" aria-label="Imagen de Ford EcoSport 2023">
+                            EcoSport 2023
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 id="veh3-title" class="vehicle-title">Ford EcoSport</h3>
+                            <div class="vehicle-details">
+                                <p>Año: 2023</p>
+                                <p>Tipo: SUV</p>
+                                <p>Color: Azul</p>
+                            </div>
+                            <div class="vehicle-price">$320,000</div>
+                            <a href="PF/vehiculos.html?id=3" class="btn">Ver Detalles</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="PF/vehiculos.html" class="btn btn-outline">Ver Todos los Vehículos</a>
+                </div>
+            </div>
+        </section>
+
+         
+        <section class="calculator-section" aria-labelledby="calc-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="calc-title">Calculadora de Pagos</h2>
+                    <p>Calcula tu financiamiento y descubre tu plan de pagos ideal</p>
+                </div>
+
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <form id="payment-calculator" aria-label="Calculadora de pagos">
+                            <div class="form-group">
+                                <label for="precio">Precio del Vehículo ($)</label>
+                                <input type="number" id="precio" name="precio" value="250000" min="0" step="1000" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="enganche">Enganche ($)</label>
+                                <input type="number" id="enganche" name="enganche" value="50000" min="0" step="1000" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="plazo">Plazo (Meses)</label>
+                                <select id="plazo" name="plazo">
+                                    <option value="12">12 meses</option>
+                                    <option value="24">24 meses</option>
+                                    <option value="36" selected>36 meses</option>
+                                    <option value="48">48 meses</option>
+                                    <option value="60">60 meses</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tasa">Tasa de Interés (%)</label>
+                                <input type="number" id="tasa" name="tasa" value="8.5" min="0" step="0.1" />
+                            </div>
+
+                            <button type="button" class="btn" id="calculate-btn">Calcular Pago</button>
+                        </form>
+                    </div>
+
+                    <aside class="calculator-result" aria-labelledby="resultado-title">
+                        <h3 id="resultado-title" style="margin-bottom: 2rem; color: var(--accent);">Resultado del Cálculo</h3>
+
+                        <div class="result-item">
+                            <span>Pago Mensual:</span>
+                            <span id="monthly-payment" class="result-total" aria-live="polite">$0.00</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span>Total Financiado:</span>
+                            <span id="total-financed">$0.00</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span>Total de Intereses:</span>
+                            <span id="total-interest">$0.00</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span>Total a Pagar:</span>
+                            <span id="total-payment">$0.00</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!--Services Section (datos estáticos de ejemplo)-->
+
+        <section class="services-section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="services-title">Nuestros Servicios</h2>
+                    <p>Mantenimiento y reparación profesional para tu vehículo</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card" aria-labelledby="s1-title">
+                        <div class="service-icon" aria-hidden="true">🔧</div>
+                        <h3 id="s1-title" class="service-title">Cambio de Aceite</h3>
+                        <div class="service-price">$450.00</div>
+                        <p>Tiempo: 1 Hora</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s2-title">
+                        <div class="service-icon" aria-hidden="true">🔧</div>
+                        <h3 id="s2-title" class="service-title">Alineación y Balanceo</h3>
+                        <div class="service-price">$600.00</div>
+                        <p>Tiempo: 1.5 Horas</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s3-title">
+                        <div class="service-icon" aria-hidden="true">🔧</div>
+                        <h3 id="s3-title" class="service-title">Servicio General</h3>
+                        <div class="service-price">$1,200.00</div>
+                        <p>Tiempo: 3 Horas</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoPremium</h3>
+                    <p>Tu agencia de confianza para vehículos seminuevos de calidad. Ofrecemos las mejores marcas y el servicio más profesional.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Av. Principal #123, Ciudad</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@autopremium.com</p>
+                    <p>🕒 Lun-Vie: 9:00 - 18:00</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="index.html">Inicio</a>
+                    <a href="PF/vehiculos.html">Catálogo</a>
+                    <a href="PF/servicios.html">Servicios</a>
+                    <a href="financiamiento.html">Financiamiento</a>
+                    <a href="clientes.html">Clientes</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <form class="contact-form" action="#" method="post">
+                        <input type="text" placeholder="Nombre" name="nombre" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <textarea placeholder="Mensaje" name="mensaje" required></textarea>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoPremium. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer> 
+    
+    <script>
+        // Calculadora de financiamiento (idéntica a la anterior, pero sin dependencias PHP)
+        (function () {
+            function formatCurrency(num) {
+                return '$' + Number(num).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+
+            function calculatePayment() {
+                const precio = parseFloat(document.getElementById('precio').value) || 0;
+                const enganche = parseFloat(document.getElementById('enganche').value) || 0;
+                const plazo = parseInt(document.getElementById('plazo').value, 10) || 1;
+                const tasaAnual = parseFloat(document.getElementById('tasa').value) || 0;
+
+                const totalFinanciado = Math.max(0, precio - enganche);
+                const tasaMensual = (tasaAnual / 100) / 12;
+
+                // Si la tasa es 0, evitar división por cero
+                let pagoMensual;
+                if (tasaMensual === 0) {
+                    pagoMensual = totalFinanciado / plazo;
+                } else {
+                    pagoMensual = (totalFinanciado * tasaMensual) / (1 - Math.pow(1 + tasaMensual, -plazo));
+                }
+
+                const totalPagar = pagoMensual * plazo;
+                const totalIntereses = totalPagar - totalFinanciado;
+
+                document.getElementById('monthly-payment').textContent = formatCurrency(pagoMensual);
+                document.getElementById('total-financed').textContent = formatCurrency(totalFinanciado);
+                document.getElementById('total-interest').textContent = formatCurrency(totalIntereses);
+                document.getElementById('total-payment').textContent = formatCurrency(totalPagar);
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Calcular al cargar
+                calculatePayment();
+
+                // Botón de calcular
+                document.getElementById('calculate-btn').addEventListener('click', calculatePayment);
+
+                // Recalcular si cambian inputs principales
+                ['precio', 'enganche', 'plazo', 'tasa'].forEach(function (id) {
+                    const el = document.getElementById(id);
+                    if (el) el.addEventListener('change', calculatePayment);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

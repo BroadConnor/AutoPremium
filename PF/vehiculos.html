@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Vehículos - AutoPremium</title>
+    <link rel="stylesheet" href="vehiculos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <a href="index.html" class="logo">Auto<span>Premium</span></a>
+            <nav>
+                <ul class="menu-navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vehiculos.html" style="color: var(--primario);">Catálogo</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="ubicanos.html">Ubícanos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contenido-principal">
+        <div class="contenedor">
+            <!-- Page Header -->
+            <div class="encabezado-pagina">
+                <h1>Catálogo de Vehículos</h1>
+                <p>Descubre nuestra exclusiva selección de vehículos seminuevos</p>
+            </div>
+
+            <!-- Filtros Section -->
+            <section class="seccion-filtros">
+                <form method="GET" action="#">
+                    <div class="cuadricula-filtros">
+                        <div class="grupo-formulario">
+                            <label for="marca">Marca</label>
+                            <select id="marca" name="marca">
+                                <option value="">Todas las marcas</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Nissan">Nissan</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" id="modelo" name="modelo" placeholder="Ej: Civic, Corolla">
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="anio">Año</label>
+                            <select id="anio" name="anio">
+                                <option value="">Todos los años</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="tipo">Tipo</label>
+                            <select id="tipo" name="tipo">
+                                <option value="">Todos los tipos</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Sedán">Sedán</option>
+                                <option value="Pickup">Pickup</option>
+                                <option value="Hatchback">Hatchback</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="color">Color</label>
+                            <select id="color" name="color">
+                                <option value="">Todos los colores</option>
+                                <option value="Blanco">Blanco</option>
+                                <option value="Negro">Negro</option>
+                                <option value="Gris">Gris</option>
+                                <option value="Azul">Azul</option>
+                                <option value="Rojo">Rojo</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="precio_min">Precio Mínimo</label>
+                            <input type="number" id="precio_min" name="precio_min" placeholder="Mínimo">
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="precio_max">Precio Máximo</label>
+                            <input type="number" id="precio_max" name="precio_max" placeholder="Máximo">
+                        </div>
+                    </div>
+
+                    <div class="acciones-filtros">
+                        <div>
+                            <button type="submit" class="boton">Aplicar Filtros</button>
+                            <a href="vehiculos.html" class="boton boton-secundario">Limpiar Filtros</a>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="orden">Ordenar por:</label>
+                            <select id="orden" name="orden">
+                                <option value="ano_desc">Más Nuevos</option>
+                                <option value="ano_asc">Más Antiguos</option>
+                                <option value="precio_asc">Precio: Menor a Mayor</option>
+                                <option value="precio_desc">Precio: Mayor a Menor</option>
+                                <option value="modelo_asc">Modelo A-Z</option>
+                                <option value="modelo_desc">Modelo Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Results Header -->
+            <div class="encabezado-resultados">
+                <div class="contador-resultados">
+                    Mostrando 9 de 9 vehículos
+                </div>
+            </div>
+
+            <!-- Vehicles Grid -->
+            <div class="cuadricula-vehiculos">
+                <!-- Vehículo 1 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo1">
+                        Toyota Corolla
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Toyota Corolla</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2022</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Blanco</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>T0Y0T4C0...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$250,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=1" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 2 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo2">
+                        Honda Civic
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Honda Civic</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2021</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Gris</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>H0ND4C1V...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$230,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=2" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 3 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo3">
+                        Ford EcoSport
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Ford EcoSport</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>SUV</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Azul</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>F0RD3C0S...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$320,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=3" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 4 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo4">
+                        Chevrolet Aveo
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Chevrolet Aveo</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2022</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Rojo</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>CH3V4V30...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$180,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=4" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- Vehículo 5 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo5">
+                        Nissan Sentra
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Nissan Sentra</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>N1554N53...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$270,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehículo 6 -->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo6">
+                        Volkswagen Jetta
+                        <div class="badge-vehiculo vendido">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Volkswagen Jetta</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2022</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Blanco</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>V0LKW4G3...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$290,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=6" class="boton boton-pequeno">Ver Detalles</a>
+                            <span class="boton boton-pequeno boton-secundario" style="opacity: 0.6; cursor: not-allowed;">No Disponible</span>
+                        </div>
+                    </div>
+                 </div>
+
+
+                <!-- Vehículo 7-->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo7">
+                        Ford F-150
+                        <div class="badge-vehiculo vendido">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Ford F-150</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2023</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Pick Up</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Blanco</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>F0RDF150B...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$1,010,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Vehículo 8-->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo8">
+                        Cadillac Escalade 
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Cadillac Escalade</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2025</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>SUV</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>35C4L403...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$2,850,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Vehículo 9-->
+                <div class="tarjeta-vehiculo">
+                    <div class="imagen-vehiculo9">
+                        Tesla Model 3
+                        <div class="badge-vehiculo disponible">
+                            Disponible
+                        </div>
+                    </div>
+                    <div class="info-vehiculo">
+                        <h3 class="titulo-vehiculo">Tesla Model 3</h3>
+                        <div class="detalles-vehiculo">
+                            <div class="detalle-vehiculo">
+                                <span>Año:</span>
+                                <span>2024</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Tipo:</span>
+                                <span>Sedán</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Color:</span>
+                                <span>Negro</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Proveedor:</span>
+                                <span>Proveedor General</span>
+                            </div>
+                            <div class="detalle-vehiculo">
+                                <span>Serie:</span>
+                                <span>T35L4M0D...</span>
+                            </div>
+                        </div>
+                        <div class="precio-vehiculo">$850,000</div>
+                        <div class="acciones-vehiculo">
+                            <a href="ver_vehiculo.html?id=5" class="boton boton-pequeno">Ver Detalles</a>
+                            <a href="financiamiento.html" class="boton boton-pequeno boton-secundario">Calcular Pago</a>
+                            <a href="#contacto" class="boton boton-pequeno boton-secundario">Cotizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="paginacion">
+                <span class="actual">1</span>
+                <a href="vehiculos.html?pagina=2">2</a>
+                <a href="vehiculos.html?pagina=3">3</a>
+                <a href="vehiculos.html?pagina=2">Siguiente</a>
+                <a href="vehiculos.html?pagina=3">Última »</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-pagina" id="contacto">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="seccion-pie">
+                    <h3>AutoPremium</h3>
+                    <p>Tu agencia de confianza para vehículos seminuevos de calidad. Ofrecemos las mejores marcas y el servicio más profesional.</p>
+                </div>
+                <div class="seccion-pie">
+                    <h3>Contacto</h3>
+                    <p>Av. Principal #123, Ciudad</p>
+                    <p>(555) 123-4567</p>
+                    <p>info@autopremium.com</p>
+                    <p>Lun-Vie: 9:00 - 18:00</p>
+                </div>
+                <div class="seccion-pie">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="index.html">Inicio</a>
+                    <a href="vehiculos.html">Catálogo</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="ubicanos.html">Ubícanos</a>
+                </div>
+                <div class="seccion-pie">
+                    <h3>Contáctanos</h3>
+                    <form class="formulario-contacto">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="boton">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <div class="pie-inferior">
+                <p>&copy; 2024 AutoPremium. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
